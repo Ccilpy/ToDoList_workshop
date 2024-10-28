@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Title from './components/Title'
+import Title from './components/Titl'
 function App() {
   
 
