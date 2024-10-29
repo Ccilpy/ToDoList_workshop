@@ -12,7 +12,8 @@ export default function TaskList({ name, newTask, id }: TaskListProps) {
     const [nextId, setNextId] = useState(1); // cela garde une trace de l'identifiant de chaque tâche, la première tâche commence à 1
     const [tasks, setTasks] = useState<{ id: number; name: string }[]>([]); // c'est un tableau contenant des objets, chaque objet représente une tâche
     const [taskCount, setTaskCount] = useState(0); // c'est le compteur du nombre de tâches, cela commence à 0
-    const [checkedTasks, setCheckedTasks] = useState<boolean[]>([]); 
+    const [checkedTasks, setCheckedTasks] = useState<boolean[]>([]);
+     
 
     const addTask = () => { // fonction qui ajoute de nouvelles tâches et incrémente le compteur de tâches
         const newTaskObj = { id: nextId, name: taskName }; //  objet qui représente une nouvelle tâche à ajouter à la liste des tâches
