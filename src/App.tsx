@@ -1,5 +1,5 @@
 import './App.css'
-import Title from './components/Titl'
+import Title from './components/Title'
 import TaskList from './components/TaskList'
 import TaskToDo from './components/TaskToDo'
 
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
     <Title />
-    <TaskToDo />
+    {/* <TaskToDo /> */}
     <TaskList name={name} newTask={newTask} id={id}/>
       
        
