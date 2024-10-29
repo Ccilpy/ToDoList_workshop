@@ -14,6 +14,7 @@ export default function TaskList({ name, newTask, id }: TaskListProps) {
     const [taskCount, setTaskCount] = useState(0); // c'est le compteur du nombre de tâches, cela commence à 0
     const [checkedTasks, setCheckedTasks] = useState<boolean[]>([]);
      
+    const completedTasksCount = checkedTasks.filter(isChecked => isChecked).length;
 
     const addTask = () => { // fonction qui ajoute de nouvelles tâches et incrémente le compteur de tâches
         const newTaskObj = { id: nextId, name: taskName }; //  objet qui représente une nouvelle tâche à ajouter à la liste des tâches
@@ -34,7 +35,7 @@ export default function TaskList({ name, newTask, id }: TaskListProps) {
     return (
         <>
             <p> {taskCount} tâches à faire</p> 
-            <p> tâches effectuées</p>
+            <p> {completedTasksCount} tâches effectuées</p>
             <input
                 value={taskName}
                 onChange={(e) => setTaskName(e.target.value)} // écoute les changements dans le champ input
